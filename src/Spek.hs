@@ -3,7 +3,7 @@
 module Spek (Spek, SpekModule, SpekItem, emptySpek) where
 
 import Control.Lens
-import Data.Vector as V (Vector, empty, snoc)
+import Data.Vector as V (Vector, empty, map, snoc)
 import Data.Vector.Lens
 
 newtype Spek = Spek {_modules :: Vector SpekModule}
@@ -30,4 +30,6 @@ addModule :: Spek -> SpekModule -> Spek
 addModule spek mod = over modules (`V.snoc` mod) spek
 
 addItem :: Spek -> SpekItem -> Spek
-addItem spek item = over (modules) (over items (`V.snoc` item) . last) spek
+addItem spek item = over (modules . sliced i 1) (V.map (over items (`V.snoc` item))) spek
+  where
+    i = length $ _modules spek
