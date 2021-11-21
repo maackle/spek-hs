@@ -24,6 +24,7 @@ dependencies:
   - cmark-gfm
   - lens
   - vector
+  - safe
   - text
 
 library:
@@ -49,4 +50,7 @@ tests:
       - -rtsopts
       - -with-rtsopts=-N
     dependencies:
+      - HUnit
       - spek-hs
+      - test-framework
+      - test-framework-hunit
