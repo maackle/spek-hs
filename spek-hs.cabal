@@ -36,6 +36,7 @@ library
       base >=4.7 && <5
     , cmark-gfm
     , lens
+    , raw-strings-qq
     , safe
     , text
     , vector
@@ -52,6 +53,7 @@ executable spek-hs-exe
       base >=4.7 && <5
     , cmark-gfm
     , lens
+    , raw-strings-qq
     , safe
     , spek-hs
     , text
@@ -71,6 +73,7 @@ test-suite spek-hs-test
     , base >=4.7 && <5
     , cmark-gfm
     , lens
+    , raw-strings-qq
     , safe
     , spek-hs
     , test-framework

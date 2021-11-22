@@ -1,13 +1,16 @@
 module Parse () where
 
-import qualified CMarkGFM as MD
-import qualified Data.Text as T
+import qualified CMarkGFM    as MD
+import qualified Data.Text   as T
 import qualified Data.Vector as V
-import Safe (fromJustNote)
-import Spek (Spek, SpekItem, SpekModule, addModule, emptySpek, makeModule)
+import           Safe        (fromJustNote)
+import           Spek        (Spek, SpekItem, SpekModule, addModule, emptySpek,
+                              makeModule)
 
+todo :: [Char] -> a
 todo reason = error $ "TODO: " <> reason
 
+unimplemented :: a
 unimplemented = error "unimplemented"
 
 data Buffer = Buffer BufferType (V.Vector MD.Node)
@@ -24,8 +27,8 @@ isContainer :: MD.NodeType -> Bool
 isContainer ty =
   case ty of
     MD.PARAGRAPH -> True
-    MD.LIST _ -> True
-    _ -> False
+    MD.LIST _    -> True
+    _            -> False
 
 flush :: Spek -> Buffer -> Spek
 flush spek (Buffer ty buf) =
