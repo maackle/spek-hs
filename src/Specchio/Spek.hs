@@ -1,6 +1,6 @@
 {-# LANGUAGE TemplateHaskell #-}
 
-module Spek
+module Specchio.Spek
   ( Spek
   , SpekModule
   , SpekItem

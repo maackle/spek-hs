@@ -1,5 +1,5 @@
 
-# Parsing SPEK.md
+# Parsing SPEC.md
 
 ###### specs
 

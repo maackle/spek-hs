@@ -4,11 +4,11 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 
-name:           spek-hs
+name:           specchio
 version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/githubuser/spek-hs#readme>
-homepage:       https://github.com/githubuser/spek-hs#readme
-bug-reports:    https://github.com/githubuser/spek-hs/issues
+description:    Please see the README on GitHub at <https://github.com/githubuser/specchio#readme>
+homepage:       https://github.com/githubuser/specchio#readme
+bug-reports:    https://github.com/githubuser/specchio/issues
 author:         Author name here
 maintainer:     example@example.com
 copyright:      2021 Author name here
@@ -21,15 +21,16 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/githubuser/spek-hs
+  location: https://github.com/githubuser/specchio
 
 library
   exposed-modules:
-      Lib
-      Parse
-      Spek
+      Specchio.Common
+      Specchio.Parse
+      Specchio.Spek
+      Specchio.Token
   other-modules:
-      Paths_spek_hs
+      Paths_specchio
   hs-source-dirs:
       src
   build-depends:
@@ -42,10 +43,10 @@ library
     , vector
   default-language: Haskell2010
 
-executable spek-hs-exe
+executable specchio-exe
   main-is: Main.hs
   other-modules:
-      Paths_spek_hs
+      Paths_specchio
   hs-source-dirs:
       app
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
@@ -55,16 +56,16 @@ executable spek-hs-exe
     , lens
     , raw-strings-qq
     , safe
-    , spek-hs
+    , specchio
     , text
     , vector
   default-language: Haskell2010
 
-test-suite spek-hs-test
+test-suite specchio-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
-      Paths_spek_hs
+      Paths_specchio
   hs-source-dirs:
       test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
@@ -75,7 +76,7 @@ test-suite spek-hs-test
     , lens
     , raw-strings-qq
     , safe
-    , spek-hs
+    , specchio
     , test-framework
     , test-framework-hunit
     , text

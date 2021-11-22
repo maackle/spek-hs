@@ -1,6 +1,6 @@
-name: spek-hs
+name: specchio
 version: 0.1.0.0
-github: "githubuser/spek-hs"
+github: "githubuser/specchio"
 license: BSD3
 author: "Author name here"
 maintainer: "example@example.com"
@@ -17,7 +17,7 @@ extra-source-files:
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
 # common to point users to the README.md file.
-description: Please see the README on GitHub at <https://github.com/githubuser/spek-hs#readme>
+description: Please see the README on GitHub at <https://github.com/githubuser/specchio#readme>
 
 dependencies:
   - base >= 4.7 && < 5
@@ -32,7 +32,7 @@ library:
   source-dirs: src
 
 executables:
-  spek-hs-exe:
+  specchio-exe:
     main: Main.hs
     source-dirs: app
     ghc-options:
@@ -40,10 +40,10 @@ executables:
       - -rtsopts
       - -with-rtsopts=-N
     dependencies:
-      - spek-hs
+      - specchio
 
 tests:
-  spek-hs-test:
+  specchio-test:
     main: Spec.hs
     source-dirs: test
     ghc-options:
@@ -52,6 +52,6 @@ tests:
       - -with-rtsopts=-N
     dependencies:
       - HUnit
-      - spek-hs
+      - specchio
       - test-framework
       - test-framework-hunit
