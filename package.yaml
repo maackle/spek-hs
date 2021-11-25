@@ -22,6 +22,7 @@ description: Please see the README on GitHub at <https://github.com/githubuser/s
 dependencies:
   - base >= 4.7 && < 5
   - cmark-gfm
+  # - gdiff
   - lens
   - raw-strings-qq
   - vector
@@ -44,7 +45,7 @@ executables:
 
 tests:
   specchio-test:
-    main: Spec.hs
+    main: Test.hs
     source-dirs: test
     ghc-options:
       - -threaded

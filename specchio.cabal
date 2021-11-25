@@ -63,7 +63,7 @@ executable specchio-exe
 
 test-suite specchio-test
   type: exitcode-stdio-1.0
-  main-is: Spec.hs
+  main-is: Test.hs
   other-modules:
       Paths_specchio
   hs-source-dirs:

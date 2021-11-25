@@ -4,7 +4,7 @@ import qualified Data.Text as T
 
 
 data Token
-  = Module String T.Text
+  = Module String (Maybe T.Text)
   | Test String
   | Comment T.Text
   deriving (Eq, Show)
